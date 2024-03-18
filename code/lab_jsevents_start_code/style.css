@@ -1,0 +1,4 @@
+#completed-list li{
+    color: rgb(108, 103, 103);
+    text-decoration: line-through;
+}
