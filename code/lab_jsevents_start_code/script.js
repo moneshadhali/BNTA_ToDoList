@@ -11,14 +11,14 @@ form.addEventListener("submit", (evt)=> {
     //create delete button
     const btnDelete = document.createElement("button");
     btnDelete.innerText = "Delete";
-    btnDelete.setAttribute("id", "value");
+    btnDelete.setAttribute("onclick", "removeItemList(this)");
 
+    newListItem.appendChild(btnDelete);
     todoList.appendChild(newListItem);
-    todoList.appendChild(btnDelete);
+    // todoList.appendChild(btnDelete);
 })
 
 //Removing item from list
-function removeList(id){
-    const listItem = document.getElementById(id);
-    return listItem.parentNode.removeChild(listItem); 
+function removeItemList(evt){
+    evt.parentElement.remove();
 }
