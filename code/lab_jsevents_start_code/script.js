@@ -1,5 +1,7 @@
 const form = document.querySelector("#todo-form");
 const todoList = document.querySelector("#list");
+const date = document.querySelector("#dateDisplay"); //<p>
+const dateBtn = document.querySelector("#date"); //<button>
 
 form.addEventListener("submit", (evt)=> {
     evt.preventDefault();
@@ -22,3 +24,8 @@ form.addEventListener("submit", (evt)=> {
 function removeItemList(evt){
     evt.parentElement.remove();
 }
+
+//Date button function:
+dateBtn.addEventListener("click", () => {
+    date.innerText = Date();
+});
